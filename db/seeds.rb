@@ -13,3 +13,6 @@ guayaki.save
 fried_chicken = Product.new(title:"chicken", price:"5.00", image_url:"https://i.ytimg.com/vi/mTGuRxX3ZTo/maxresdefault.jpg", description:"finger lickin good")
 fried_chicken.save
 
+toilet_brush = Product.new(title:"toilet scrubber", price:"7.50", image_url:"https://images.want-that.com/2013/07/Gun-Shaped-Toilet-Brush.png", description:"cleans toilets and the american dream")
+toilet_brush.save
+
