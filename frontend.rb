@@ -6,6 +6,8 @@ puts "choose an option"
 puts "[1] show one product"
 puts "[2] show all products"
 puts "[3] add a new product"
+puts "[4] update the ID of a product"
+puts "[5] DELETE A PRODUCT"
 
 user_input = gets.chomp 
 
@@ -31,7 +33,7 @@ elsif user_input == "3"
   puts JSON.pretty_generate(product)
 elsif user_input == "4"
   params = {}
-  puts "Update the ID of the product" 
+  puts "Enter the ID of the product" 
   input_id = gets.chomp 
   response = Unirest.get("http://localhost:3000/products/#{input_id}")
   product = response.body
