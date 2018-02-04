@@ -1,10 +1,25 @@
 Rails.application.routes.draw do
-  get "/products" => "products#index"
-  post "/products" => "products#create"
+  post 'user_token' => 'user_token#create'
 
-  get "/product/:product" => "products#show"
+  get '/products' => 'products#index'
+  post '/products' => 'products#create'
 
-  patch "/product/:id" => "products#update"
+  get '/product/:id' => 'products#show'
 
-  delete "/product/:id" => "products#destroy"
+  patch '/product/:id' => 'products#update'
+
+  delete '/product/:id' => 'products#destroy'
+
+  post '/users' => 'users#create'
+  get '/users' => 'users#index'
+
+  get '/orders' => 'orders#index'
+  post '/orders' => 'orders#create'
+
+  get '/categories' => 'categories#index'
+
+  get '/carted_products' => 'carted_products#index'
+  post '/carted_products' => 'carted_products#create'
+  delete '/carted_products' => 'carted_products#destroy'
+  
 end
